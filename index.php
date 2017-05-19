@@ -1,6 +1,6 @@
 <?php
 include "qywechat.class.php";
-
+/*
 function logg($text){
     file_put_contents('./log.txt',$text."\r\n\r\n",FILE_APPEND);
 };
@@ -22,16 +22,7 @@ if (!$ret) {
 	var_dump($ret);
 	exit;
 }
-/*
-$f = $weObj->getRev()->getRevFrom();	//获取发送者微信号
-$t = $weObj->getRevType();				//获取发送的类型
-$d = $weObj->getRevData();				//获取发送的data
-if ($t=="text")
-{
-	$c = $weObj->getRevContent();			//获取发送的内容
-	$weObj->news(Check_tecket($c))->reply();
-}
-*/
+
 
 $f = $weObj->getRev()->getRevFrom();	//获取发送者微信号
 $t = $weObj->getRevType();				//获取发送的类型
@@ -39,10 +30,10 @@ $d = $weObj->getRevData();				//获取发送的data
 $c = $weObj->getRevContent();			//获取发送的内容
 $weObj->news(Check_tecket($c))->reply();
 //$weObj->text("你好！来自星星的：")->reply();
-logg("-----------------------------------------");
+logg("-----------------------------------------");*/
 
 
-
+var_dump(Check_tecket('13605725464'));
 
 
 
