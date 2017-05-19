@@ -60,9 +60,10 @@ curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);
 $json = curl_exec($ch);
 $data = json_decode($json,true);
+	return $data;
 $ticketcount = count($data['ticketorder']);
-$inclusivecount = count($data['inclusiveorder']);
-$hotelcount = count($data['hotelorder']);
+/*$inclusivecount = count($data['inclusiveorder']);
+$hotelcount = count($data['hotelorder']);*/
 
 
   	$i=0;
