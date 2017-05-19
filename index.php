@@ -1,6 +1,6 @@
 <?php
 include "qywechat.class.php";
-/*
+
 function logg($text){
     file_put_contents('./log.txt',$text."\r\n\r\n",FILE_APPEND);
 };
@@ -14,7 +14,7 @@ $options = array(
         'logcallback'=>'logg'
 
 );
-logg("GET参数为：\n".var_export($_GET,true));
+//logg("GET参数为：\n".var_export($_GET,true));
 $weObj = new Wechat($options);
 $ret=$weObj->valid();
 if (!$ret) {
@@ -30,10 +30,10 @@ $d = $weObj->getRevData();				//获取发送的data
 $c = $weObj->getRevContent();			//获取发送的内容
 $weObj->news(Check_tecket($c))->reply();
 //$weObj->text("你好！来自星星的：")->reply();
-logg("-----------------------------------------");*/
+//logg("-----------------------------------------");
 
 
-var_dump(Check_tecket('15995752153'));
+
 
 
 
@@ -53,12 +53,12 @@ function Check_tecket($tel)
 	$hotelcount = count($data['hotelorder']);
 */
 
-$url = "http://e.hengdianworld.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
+$url = "http://ydpt.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
 
-$ch = curl_init();
+/*$ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);*/
 	$json=file_get_contents($url);
 //$json = curl_exec($ch);
 
