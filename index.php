@@ -8,7 +8,8 @@ function logg($text){
 $options = array(
         'token'=>'yz43hRyIDGFUdQy3qtaZ0',	//填写应用接口的Token
         'encodingaeskey'=>'Eu6T9BjvcKn3m2s2DR87uCAE1M4tnbrqXdJ6nTb7DMh',//填写加密用的EncodingAESKey
-        'appid'=>'wx6bb8b192d1dcfe19',	//填写高级调用功能的appid
+        'appsecret'=>'Fh7r_eihHhtjjmgKh9k7HuVlGBj-sSNV0AU5Pu8Y0ng',
+        'appid'=>'wwfb1970349326c73f',	//填写高级调用功能的appid
         'debug'=>true,
         'logcallback'=>'logg'
 
@@ -61,7 +62,7 @@ function Check_tecket($tel)
 	$hotelcount = count($data['hotelorder']);
 */
 
-$url = "http://e.hengdianworld.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
+$url = "http://ydpt.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
 $ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
