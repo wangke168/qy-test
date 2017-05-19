@@ -39,7 +39,7 @@ $d = $weObj->getRevData();				//获取发送的data
 $c = $weObj->getRevContent();			//获取发送的内容
 $weObj->news(Check_tecket($c))->reply();
 //$weObj->text("你好！来自星星的：")->reply();
-//logg("-----------------------------------------");
+logg("-----------------------------------------");
 
 
 
