@@ -31,7 +31,7 @@ $f = $weObj->getRev()->getRevFrom();    //获取发送者微信号
 $t = $weObj->getRevType();                //获取发送的类型
 $d = $weObj->getRevData();                //获取发送的data
 $c = $weObj->getRevContent();            //获取发送的内容
-$weObj->news(Check_tecket('13605725464'))->reply();
+$weObj->news(Check_tecket($c))->reply();
 //$weObj->text("你好！来自星星的：")->reply();
 //logg("-----------------------------------------");
 
