@@ -6,8 +6,8 @@ function logg($text){
 };
 
 $options = array(
-        'token'=>'yz43hRyIDGFUdQy3qtaZ0',	//填写应用接口的Token
-        'encodingaeskey'=>'Eu6T9BjvcKn3m2s2DR87uCAE1M4tnbrqXdJ6nTb7DMh',//填写加密用的EncodingAESKey
+        'token'=>'jianpiao',	//填写应用接口的Token
+        'encodingaeskey'=>'X5HFXA537wZkVwUicueeuPlsGgvgftDPdyv9pnNMaMp',//填写加密用的EncodingAESKey
         'appsecret'=>'Fh7r_eihHhtjjmgKh9k7HuVlGBj-sSNV0AU5Pu8Y0ng',
         'appid'=>'wwfb1970349326c73f',	//填写高级调用功能的appid
         'debug'=>true,
