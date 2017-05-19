@@ -6,7 +6,7 @@ function logg($text)
     file_put_contents('./log.txt', $text . "\r\n\r\n", FILE_APPEND);
 }
 
-var_dump(Check_tecket('13605725'));
+var_dump(Check_tecket('13605725464'));
 
 $options = array(
     'token' => 'jianpiao',    //填写应用接口的Token
