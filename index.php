@@ -14,7 +14,7 @@ $options = array(
         'logcallback'=>'logg'
 
 );
-//logg("GET参数为：\n".var_export($_GET,true));
+logg("GET参数为：\n".var_export($_GET,true));
 $weObj = new Wechat($options);
 $ret=$weObj->valid();
 if (!$ret) {
@@ -28,10 +28,9 @@ $f = $weObj->getRev()->getRevFrom();	//获取发送者微信号
 $t = $weObj->getRevType();				//获取发送的类型
 $d = $weObj->getRevData();				//获取发送的data
 $c = $weObj->getRevContent();			//获取发送的内容
-//$weObj->news(Check_tecket($c))->reply();
-$weObj->text("你好！来自星星的：")->reply();
+$weObj->news(Check_tecket('13605725464'))->reply();
+//$weObj->text("你好！来自星星的：")->reply();
 //logg("-----------------------------------------");
-
 
 
 
