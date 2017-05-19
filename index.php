@@ -100,8 +100,8 @@ function Check_tecket($tel)
             'Url' => 'http://weix2.hengdianworld.com/article/articledetail.php?id=44'
         )
     );
-//    return $newsData;
-    return $str;
+    return $newsData;
+//    return $str;
 }
 
 ?>
