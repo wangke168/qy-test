@@ -1,0 +1,12 @@
+GET参数为：
+array (
+)
+
+GET参数为：
+array (
+)
+
+GET参数为：
+array (
+)
+
