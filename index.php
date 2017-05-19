@@ -33,7 +33,7 @@ $weObj->news(Check_tecket($c))->reply();
 logg("-----------------------------------------");*/
 
 
-var_dump(Check_tecket('13605725464'));
+var_dump(Check_tecket('15995752153'));
 
 
 
@@ -53,14 +53,15 @@ function Check_tecket($tel)
 	$hotelcount = count($data['hotelorder']);
 */
 
-$url = "http://ydpt.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
+$url = "http://e.hengdianworld.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
+
 $ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);
 $json = curl_exec($ch);
 $data = json_decode($json,true);
-	return $data;
+//	return $data;
 $ticketcount = count($data['ticketorder']);
 /*$inclusivecount = count($data['inclusiveorder']);
 $hotelcount = count($data['hotelorder']);*/
@@ -81,14 +82,14 @@ $hotelcount = count($data['hotelorder']);*/
           $str=$str."\n预达日期:".$data['ticketorder'][$j]['date2'];
           $str=$str."\n预购景点:".$data['ticketorder'][$j]['ticket'];
           $str=$str."\n人数:".$data['ticketorder'][$j]['numbers'];
-		  if ($data['ticketorder'][$j]['ticket']=='三大点+梦幻谷' || $data['ticketorder'][$j]['ticket']=='网络联票+梦幻谷')
+	/*	  if ($data['ticketorder'][$j]['ticket']=='三大点+梦幻谷' || $data['ticketorder'][$j]['ticket']=='网络联票+梦幻谷')
 		  {
 			 $str=$str."\n注意：该票种需要身份证检票";
 		  }
 		  else
-		  {
+		  {*/
 			$str=$str."\n订单识别码:".$data['ticketorder'][$j]['code']."（在检票口出示此识别码可直接进入景区。）";
-		  }
+//		  }
           $str=$str."\n订单状态:".$data['ticketorder'][$j]['flag']."\n";
         }
     }
