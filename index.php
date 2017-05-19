@@ -59,7 +59,9 @@ $ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);
-$json = curl_exec($ch);
+	$json=file_get_contents($url);
+//$json = curl_exec($ch);
+
 $data = json_decode($json,true);
 //	return $data;
 $ticketcount = count($data['ticketorder']);
