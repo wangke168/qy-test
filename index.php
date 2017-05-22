@@ -17,7 +17,7 @@ $options = array(
     'logcallback' => 'logg'
 
 );
-logg("GET参数为：\n" . var_export($_GET, true));
+//logg("GET参数为：\n" . var_export($_GET, true));
 $weObj = new Wechat($options);
 $ret = $weObj->valid();
 if (!$ret) {
@@ -31,7 +31,9 @@ $f = $weObj->getRev()->getRevFrom();    //获取发送者微信号
 $t = $weObj->getRevType();                //获取发送的类型
 $d = $weObj->getRevData();                //获取发送的data
 $c = $weObj->getRevContent();            //获取发送的内容
-$weObj->news(Check_tecket($c))->reply();
+if ($t == "text") {
+    $weObj->news(Check_tecket($c))->reply();
+}
 //$weObj->text("你好！来自星星的：")->reply();
 //logg("-----------------------------------------");
 
@@ -70,7 +72,7 @@ function Check_tecket($tel)
 
     //    $str=$str."姓名：".$name."   电话：".$tel."\n";
     if ($ticketcount <> 0) {
-        $str = "您好，该客人的预订信息如下\n注意，若是联票+梦幻谷或者三点+梦幻谷的门票仍然需要身份证检票\n";
+        $str = "您好，该客人的预订信息如下";
         for ($j = 0; $j < $ticketcount; $j++) {
             $i = $i + 1;
             $str = $str . "\n订单" . $i;
