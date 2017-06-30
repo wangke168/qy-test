@@ -9,8 +9,8 @@ curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 $file_contents = curl_exec($ch);
 curl_close($ch);
-echo $file_contents;
-var_dump($url);
+var_dump ($file_contents);
+//var_dump($url);
 function Check_tecket($tel)
 {
     //    $url="http://e.hengdianworld.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
