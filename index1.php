@@ -1,6 +1,6 @@
 <?php
 
-
+echo "as";
 var_dump(Check_tecket("13605725464"));
 function Check_tecket($tel)
 {
@@ -25,9 +25,8 @@ function Check_tecket($tel)
 //$json = curl_exec($ch);
 
     $data = json_decode($json, true);
-//	return $data;
+	return $data;
 
-    return $data;
     $ticketcount = count($data['ticketorder']);
     /*$inclusivecount = count($data['inclusiveorder']);
     $hotelcount = count($data['hotelorder']);*/
