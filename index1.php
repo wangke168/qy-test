@@ -26,6 +26,8 @@ function Check_tecket($tel)
 
     $data = json_decode($json, true);
 //	return $data;
+
+    return $data;
     $ticketcount = count($data['ticketorder']);
     /*$inclusivecount = count($data['inclusiveorder']);
     $hotelcount = count($data['hotelorder']);*/
