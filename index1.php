@@ -2,13 +2,13 @@
 
 $url = "http://e-test.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=13605725464";
 
-$ch = curl_init();
+/*$ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);
-//$json = file_get_contents($url);
-$json = curl_exec($ch);
-var_dump($json);
+curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT,10);*/
+$json = file_get_contents($url);
+
+var_dump($url);
 function Check_tecket($tel)
 {
     //    $url="http://e.hengdianworld.com/searchorder_json.aspx?name=Anonymous&phone=".$tel;
