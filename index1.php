@@ -1,6 +1,6 @@
 <?php
 
-$url = "http://e-test.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=13605725464";
+$url = "http://ydpt.hdymxy.com/searchorder_json.aspx?name=Anonymous&phone=13605725464";
 
 $ch = curl_init();
 $timeout = 5;
