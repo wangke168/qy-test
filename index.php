@@ -52,7 +52,7 @@ function Check_tecket($tel)
         $hotelcount = count($data['hotelorder']);
     */
 
-    $url = "http://e-test.hdyuanmingxinyuan.com/searchorder_json.aspx?name=Anonymous&phone=" . $tel;
+    $url = "http://10.0.61.201/searchorder_json.aspx?name=Anonymous&phone=" . $tel;
 
     /*$ch = curl_init();
     curl_setopt ($ch, CURLOPT_URL, $url);
